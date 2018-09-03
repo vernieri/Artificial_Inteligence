@@ -5,26 +5,26 @@ import java.awt.*;
 
 public class teste_backpropagation extends javax.swing.JFrame{
 
-static double [] pesos = new double[600];
-static double [] backp = new double[600];
+	static double [] pesos = new double[600];
+	static double [] backp = new double[600];
 
-public static void main(String args[]){
+	public static void main(String args[]){
 
-grafico g = new grafico();
-grafico gf;
+	grafico g = new grafico();
+	grafico gf;
 
-backpropagation bck = new backpropagation();
+	backpropagation bck = new backpropagation();
 
-bck.iteracao_III();
-back = bck.teste_backpropagation(bck.v0, bck.v, bck.w0, bck.w);
+	bck.iteracao_III();
+	back = bck.teste_backpropagation(bck.v0, bck.v, bck.w0, bck.w);
 
-JFrame.aplicacao = new JFrame();
-aplicacao.getContentPane().setBackground (new Color (255, 255, 255));
-aplicacao.setTitle("Redes neurais Artificiais");
-aplicacao.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-aplicacao.add(g);
-aplicacao.setSize(500, 480);
-aplicacao.setVisable(true);
+	JFrame.aplicacao = new JFrame();
+	aplicacao.getContentPane().setBackground (new Color (255, 255, 255));
+	aplicacao.setTitle("Redes neurais Artificiais");
+	aplicacao.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	aplicacao.add(g);
+	aplicacao.setSize(500, 480);
+	aplicacao.setVisable(true);
 }
    public double [] get_backp(){
     return backp;
@@ -33,21 +33,21 @@ aplicacao.setVisable(true);
 
 public class grafico extends JPanel{
 
-static String mx, mn;
-static double maximo, minimo, a, b, c, d, e, f, l, h, i, j, m;
+	static String mx, mn;
+	static double maximo, minimo, a, b, c, d, e, f, l, h, i, j, m;
 
-double evidencia;
-double []t = new double [300];
-double []w = new double [300];
-private double [] ff = new double [600];
-private double [] fg = new double [600];
+	double evidencia;
+	double []t = new double [300];
+	double []w = new double [300];
+	private double [] ff = new double [600];
+	private double [] fg = new double [600];
 
-teste_backpropagation aa = new teste_backpropagation;
+	teste_backpropagation aa = new teste_backpropagation;
 
-grafico () {} 
+	grafico () {} 
 
-grafico (double [] shapes) {
-ff = shapes;
+	grafico (double [] shapes) {
+	ff = shapes;
 
 }
 
@@ -94,5 +94,5 @@ public void paintComponent (Graphics g){
 		g.drawString("*sinal 2 ", 130, 50);
 
 
-}
+	}
 }
